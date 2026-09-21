@@ -820,3 +820,130 @@ em {
 [data-theme="dark"] .mobile-app__media img {
     filter: drop-shadow(0 24px 44px rgba(0, 0, 0, .55));
 }
+
+.footer {
+    padding: 40px 0 24px;
+}
+
+.footer__card {
+    position: relative;
+    border-radius: var(--radius-lg);
+    background: var(--container);
+    color: var(--text-inverse);
+    padding: 64px 60px;
+    display: grid;
+    grid-template-columns: 1.4fr 1fr;
+    gap: 60px;
+    overflow: hidden;
+}
+
+.footer__title {
+    font-size: clamp(32px, 2.64vw + 22px, 60px);
+    font-weight: 600;
+    line-height: 1.25;
+    letter-spacing: -.02em;
+    color: var(--text-inverse);
+    margin: 0 0 32px;
+}
+
+.footer__social {
+    display: flex;
+    gap: 14px;
+}
+
+.footer__social a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    border: 1.5px solid color-mix(in srgb, var(--text-inverse) 35%, transparent);
+    transition: background-color var(--t), border-color var(--t);
+}
+
+.footer__social a img {
+    width: 18px;
+    height: 18px;
+    object-fit: contain;
+    display: block;
+    pointer-events: none;
+    transition: filter var(--t);
+}
+
+.footer__social a:hover {
+    background: var(--text-inverse);
+    border-color: var(--text-inverse);
+}
+
+.footer__social a:hover img {
+    filter: brightness(0);
+}
+
+.footer__subtitle {
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 1.5;
+    color: var(--text-inverse);
+    margin: 0 0 22px;
+}
+
+.footer__contacts {
+    display: grid;
+    gap: 16px;
+}
+
+.footer__contacts li {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    color: color-mix(in srgb, var(--text-inverse) 88%, transparent);
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.5;
+}
+
+.footer__contacts svg {
+    flex-shrink: 0;
+    color: var(--accent);
+}
+
+.footer__contacts a {
+    transition: color var(--t);
+    border-bottom: 1px solid transparent;
+}
+
+.footer__contacts a:hover {
+    color: var(--accent);
+    border-bottom-color: var(--accent);
+}
+
+.footer__bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 24px 12px 0;
+    color: var(--muted);
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.5;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.footer__bottom p {
+    margin: 0;
+}
+
+.footer__bottom-links {
+    display: flex;
+    gap: 20px;
+}
+
+.footer__bottom-links a {
+    transition: color var(--t);
+}
+
+.footer__bottom-links a:hover {
+    color: var(--accent);
+}
