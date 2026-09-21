@@ -313,3 +313,38 @@ em {
 [data-theme="dark"] .theme-toggle:hover .theme-toggle__icon--sun {
     background: color-mix(in srgb, var(--accent) 40%, transparent);
 }
+
+.mobile-menu {
+    border-top: 1px solid var(--border);
+    background: var(--surface);
+    padding: 8px 0;
+}
+
+.mobile-menu[hidden] {
+    display: none;
+}
+
+.mobile-menu__list {
+    display: flex;
+    flex-direction: column;
+}
+
+.mobile-menu__list a {
+    display: block;
+    padding: 16px 28px;
+    color: var(--text);
+    font-size: 32px;
+    font-weight: 600;
+    line-height: 1.25;
+    border-bottom: 1px solid var(--border);
+    transition: background-color var(--t), color var(--t);
+}
+
+.mobile-menu__list li:last-child a {
+    border-bottom: none;
+}
+
+.mobile-menu__list a:hover {
+    background: color-mix(in srgb, var(--accent) 15%, transparent);
+    color: var(--accent-hover);
+}
