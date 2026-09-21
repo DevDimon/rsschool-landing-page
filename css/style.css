@@ -494,18 +494,6 @@ em {
     box-shadow: var(--shadow-sm);
 }
 
-.btn--light::after {
-    content: "";
-    width: 0;
-    height: 16px;
-    margin-left: 0;
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-    transition: width var(--t), margin-left var(--t);
-    flex-shrink: 0;
-}
-
 .btn--light:hover {
     background: var(--surface);
     box-shadow: var(--shadow-md);
