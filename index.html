@@ -18,14 +18,14 @@
 <body>
     <header class="header">
         <div class="container header__inner">
-            <a class="logo" href="index.html" aria-label="Resource Coffee House — на главную">
+            <a class="logo" href="index.html">
                 <img class="logo__img logo__img--light" src="images/logo.png" alt="Resource Coffee House" width="150"
                     height="62">
                 <img class="logo__img logo__img--dark" src="images/logo-dark.png" alt="" width="150" height="62"
                     aria-hidden="true">
             </a>
 
-            <nav class="nav" aria-label="Основная навигация">
+            <nav class="nav">
                 <ul class="nav__list">
                     <li><a class="nav__link" href="#favorite">Favorite coffee</a></li>
                     <li><a class="nav__link" href="#about">About</a></li>
@@ -85,6 +85,78 @@
                         </p>
                         <a class="btn btn--light" href="#favorite">Menu</a>
                     </div>
+                </div>
+            </div>
+        </section>
+        <section class="section slider" id="favorite" aria-labelledby="favorite-title">
+            <div class="container">
+                <h2 class="section__title section__title--center" id="favorite-title">
+                    Choose your <em>favorite</em> coffee
+                </h2>
+
+                <div class="slider__viewport" data-slider>
+                    <ul class="slider__track" data-slider-track>
+                        <li class="slider__slide">
+                            <div class="slide">
+                                <div class="slide__media">
+                                    <img src="images/coffee-slider-1.png"
+                                        alt="S'mores Frappuccino в высоком стакане с карамелью" />
+                                </div>
+                                <h3 class="slide__title">S'mores Frappuccino</h3>
+                                <p class="slide__text">
+                                    This new drink takes an espresso and mixes it with brown sugar and cinnamon
+                                    before being topped with oat milk.
+                                </p>
+                                <p class="slide__price">$5.50</p>
+                            </div>
+                        </li>
+
+                        <li class="slider__slide">
+                            <div class="slide">
+                                <div class="slide__media">
+                                    <img src="images/coffee-slider-2.png"
+                                        alt="Caramel Macchiato в двойном стеклянном стакане" />
+                                </div>
+                                <h3 class="slide__title">Caramel Macchiato</h3>
+                                <p class="slide__text">
+                                    Fragrant and unique classic espresso with rich caramel-peanut syrup,
+                                    with the addition of delicate cream under whipped thick foam.
+                                </p>
+                                <p class="slide__price">$5.00</p>
+                            </div>
+                        </li>
+
+                        <li class="slider__slide">
+                            <div class="slide">
+                                <div class="slide__media">
+                                    <img src="images/coffee-slider-3.png" alt="Ice coffee со льдом в высоком стакане" />
+                                </div>
+                                <h3 class="slide__title">Ice coffee</h3>
+                                <p class="slide__text">
+                                    A popular summer drink that tones and invigorates. Prepared from coffee,
+                                    milk and ice.
+                                </p>
+                                <p class="slide__price">$4.50</p>
+                            </div>
+                        </li>
+                    </ul>
+
+                    <button class="slider__arrow slider__arrow--prev" type="button" data-slider-prev
+                        aria-label="Предыдущий напиток">
+                        <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true">
+                            <path d="M15 5l-7 7 7 7" fill="none" stroke="currentColor" stroke-width="1.8"
+                                stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                    </button>
+                    <button class="slider__arrow slider__arrow--next" type="button" data-slider-next
+                        aria-label="Следующий напиток">
+                        <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true">
+                            <path d="M9 5l7 7-7 7" fill="none" stroke="currentColor" stroke-width="1.8"
+                                stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                    </button>
+
+                    <div class="slider__dots" data-slider-dots></div>
                 </div>
             </div>
         </section>
