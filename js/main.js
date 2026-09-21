@@ -1,12 +1,10 @@
 (function () {
   'use strict';
 
-  /* ----- Год в футере ----- */
   document.querySelectorAll('[data-year]').forEach(function (el) {
     el.textContent = new Date().getFullYear();
   });
 
-  /* ----- Слайдер (бесшовное зацикливание) ----- */
   var slider = document.querySelector('[data-slider]');
   if (slider) {
     var track    = slider.querySelector('[data-slider-track]');
@@ -125,7 +123,6 @@
     renderDots();
   }
 
-  /* ----- Каталог: табы + показать ещё ----- */
   var tabs    = document.querySelectorAll('.tab[data-category]');
   var grids   = document.querySelectorAll('[data-grid]');
   var moreWrap = document.querySelector('.catalog__more');
