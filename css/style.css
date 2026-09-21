@@ -698,3 +698,125 @@ em {
     background: var(--text);
     width: 44px;
 }
+
+/* ABOUT */
+
+.about {
+    padding-top: 40px;
+}
+
+.about__lead {
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 1.25;
+    letter-spacing: -.01em;
+    max-width: 100%;
+    margin: 0 0 56px;
+    text-align: left;
+}
+
+.about__gallery {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(2, minmax(0, 1fr));
+    gap: 22px;
+    width: 100%;
+}
+
+.about__gallery li {
+    overflow: hidden;
+    border-radius: var(--radius-md);
+}
+
+.about__gallery img {
+    width: 100%;
+    height: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+}
+
+@media (min-width: 1024px) {
+    .about__gallery {
+        grid-template-columns: 1.05fr 1fr;
+        grid-template-rows: 380px 400px;
+    }
+
+    .about__gallery li:nth-child(1) img {
+        aspect-ratio: auto;
+    }
+
+    .about__gallery li:nth-child(2) img {
+        aspect-ratio: auto;
+    }
+}
+
+.mobile-app {
+    padding: 60px 0 80px;
+}
+
+.mobile-app__inner {
+    display: grid;
+    grid-template-columns: 1fr 1.15fr;
+    gap: 60px;
+    align-items: center;
+}
+
+.mobile-app__title {
+    font-size: clamp(32px, 2.64vw + 22px, 60px);
+    font-weight: 600;
+    line-height: 1.25;
+    letter-spacing: -.02em;
+    margin: 0 0 22px;
+}
+
+.mobile-app__text {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.5;
+    color: var(--muted);
+    max-width: 46ch;
+    margin: 0 0 36px;
+}
+
+.mobile-app__actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+}
+
+.store-badge {
+    display: inline-block;
+    height: 56px;
+    transition: opacity var(--t);
+}
+
+.store-badge img {
+    height: 100%;
+    width: auto;
+    display: block;
+}
+
+.store-badge:hover {
+    opacity: .85;
+}
+
+[data-theme="dark"] .store-badge img {
+    filter: invert(1) hue-rotate(180deg);
+}
+
+.mobile-app__media {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.mobile-app__media img {
+    width: 100%;
+    max-width: 640px;
+    height: auto;
+    filter: drop-shadow(0 24px 44px rgba(64, 63, 61, .20));
+}
+
+[data-theme="dark"] .mobile-app__media img {
+    filter: drop-shadow(0 24px 44px rgba(0, 0, 0, .55));
+}
