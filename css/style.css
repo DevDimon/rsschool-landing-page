@@ -125,23 +125,6 @@ em {
     font-weight: 600;
 }
 
-.skip-link {
-    position: absolute;
-    left: 8px;
-    top: -60px;
-    background: var(--accent);
-    color: var(--accent-contrast);
-    padding: 10px 16px;
-    border-radius: 8px;
-    z-index: 999;
-    font-weight: 600;
-    transition: top var(--t);
-}
-
-.skip-link:focus {
-    top: 8px;
-}
-
 .container {
     width: 100%;
     max-width: var(--content-w);
@@ -495,7 +478,8 @@ em {
 }
 
 .btn--light:hover {
-    background: var(--surface);
+    background: var(--text);
+    color: var(--surface);
     box-shadow: var(--shadow-md);
 }
 
@@ -1147,6 +1131,7 @@ em {
     }
 
     .header__inner {
+        justify-content: space-between;
         gap: 16px;
     }
 
@@ -1184,14 +1169,6 @@ em {
     .slider__arrow {
         width: 46px;
         height: 46px;
-    }
-
-    .slider__arrow--prev {
-        left: -4px;
-    }
-
-    .slider__arrow--next {
-        right: -4px;
     }
 
     .about__lead {
