@@ -123,4 +123,55 @@
     void track.offsetWidth;
 
     renderDots();
-  }})();
+  }
+
+  /* ----- Каталог: табы + показать ещё ----- */
+  var tabs    = document.querySelectorAll('.tab[data-category]');
+  var grids   = document.querySelectorAll('[data-grid]');
+  var moreWrap = document.querySelector('.catalog__more');
+  var moreBtn  = document.querySelector('[data-show-more]');
+
+  function activeGrid() {
+    for (var i = 0; i < grids.length; i++) {
+      if (!grids[i].hidden) return grids[i];
+    }
+    return null;
+  }
+
+  function refreshMoreButton() {
+    if (!moreWrap || !moreBtn) return;
+    var grid = activeGrid();
+    if (!grid) { moreWrap.hidden = true; return; }
+    var extras = grid.querySelectorAll('.grid__item--extra');
+    var hasHidden = Array.prototype.some.call(extras, function (el) { return el.hidden; });
+    moreWrap.hidden = !hasHidden;
+  }
+
+  if (tabs.length && grids.length) {
+    tabs.forEach(function (tab) {
+      tab.addEventListener('click', function () {
+        var cat = tab.dataset.category;
+        tabs.forEach(function (t) {
+          var active = t === tab;
+          t.classList.toggle('tab--active', active);
+          t.setAttribute('aria-selected', active ? 'true' : 'false');
+        });
+        grids.forEach(function (g) { g.hidden = g.dataset.grid !== cat; });
+        refreshMoreButton();
+      });
+    });
+  }
+
+  if (moreBtn) {
+    moreBtn.addEventListener('click', function () {
+      var grid = activeGrid();
+      if (!grid) return;
+      grid.querySelectorAll('.grid__item--extra[hidden]').forEach(function (el) {
+        el.hidden = false;
+      });
+      refreshMoreButton();
+    });
+  }
+
+  refreshMoreButton();
+})();

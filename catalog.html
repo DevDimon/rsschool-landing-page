@@ -79,6 +79,280 @@
             </ul>
         </div>
     </header>
+
+    <main id="main">
+
+        <section class="catalog-header">
+            <div class="container">
+                <h1 class="catalog-header__title">
+                    Behind each of our cups<br>
+                    hides an <em>amazing surprise</em>
+                </h1>
+            </div>
+        </section>
+
+        <section class="section catalog" aria-labelledby="catalog-title">
+            <div class="container">
+
+                <div class="tabs" role="tablist" aria-label="Категории меню">
+                    <button class="tab tab--active" type="button" role="tab" aria-selected="true"
+                        data-category="coffee">
+                        <img class="tab__icon" src="images/coffee-icon.png" alt="" width="24" height="24">
+                        <span>Coffee</span>
+                    </button>
+                    <button class="tab" type="button" role="tab" aria-selected="false" data-category="tea">
+                        <img class="tab__icon" src="images/tea-icon.png" alt="" width="24" height="24">
+                        <span>Tea</span>
+                    </button>
+                    <button class="tab" type="button" role="tab" aria-selected="false" data-category="dessert">
+                        <img class="tab__icon" src="images/dessert-icon.png" alt="" width="24" height="24">
+                        <span>Dessert</span>
+                    </button>
+                </div>
+
+                <ul class="grid" data-grid="coffee">
+                    <li class="grid__item">
+                        <article class="card card--product">
+                            <img class="card__img" src="images/coffee-1.jpg" alt="Irish coffee">
+                            <div class="card__body">
+                                <h3 class="card__title">Irish coffee</h3>
+                                <p class="card__text">Fragrant black coffee with Jameson Irish whiskey and whipped milk
+                                </p>
+                                <span class="price">$7.00</span>
+                            </div>
+                        </article>
+                    </li>
+
+                    <li class="grid__item">
+                        <article class="card card--product">
+                            <img class="card__img" src="images/coffee-2.jpg" alt="Kahlua coffee">
+                            <div class="card__body">
+                                <h3 class="card__title">Kahlua coffee</h3>
+                                <p class="card__text">Classic coffee with milk and Kahlua liqueur under a cap of frothed
+                                    milk</p>
+                                <span class="price">$7.00</span>
+                            </div>
+                        </article>
+                    </li>
+
+                    <li class="grid__item">
+                        <article class="card card--product">
+                            <img class="card__img" src="images/coffee-3.jpg" alt="Honey raf">
+                            <div class="card__body">
+                                <h3 class="card__title">Honey raf</h3>
+                                <p class="card__text">Espresso with frothed milk, cream and aromatic honey</p>
+                                <span class="price">$5.50</span>
+                            </div>
+                        </article>
+                    </li>
+
+                    <li class="grid__item">
+                        <article class="card card--product">
+                            <img class="card__img" src="images/coffee-4.jpg" alt="Ice cappuccino">
+                            <div class="card__body">
+                                <h3 class="card__title">Ice cappuccino</h3>
+                                <p class="card__text">Cappuccino with soft thick foam in summer version with ice</p>
+                                <span class="price">$5.00</span>
+                            </div>
+                        </article>
+                    </li>
+
+                    <li class="grid__item">
+                        <article class="card card--product">
+                            <img class="card__img" src="images/coffee-5.jpg" alt="Espresso">
+                            <div class="card__body">
+                                <h3 class="card__title">Espresso</h3>
+                                <p class="card__text">Classic black coffee</p>
+                                <span class="price">$4.50</span>
+                            </div>
+                        </article>
+                    </li>
+
+                    <li class="grid__item">
+                        <article class="card card--product">
+                            <img class="card__img" src="images/coffee-6.jpg" alt="Latte">
+                            <div class="card__body">
+                                <h3 class="card__title">Latte</h3>
+                                <p class="card__text">Espresso coffee with the addition of steamed milk and dense milk
+                                    foam</p>
+                                <span class="price">$5.50</span>
+                            </div>
+                        </article>
+                    </li>
+
+                    <li class="grid__item">
+                        <article class="card card--product">
+                            <img class="card__img" src="images/coffee-7.jpg" alt="Latte macchiato">
+                            <div class="card__body">
+                                <h3 class="card__title">Latte macchiato</h3>
+                                <p class="card__text">Espresso with frothed milk and chocolate</p>
+                                <span class="price">$5.50</span>
+                            </div>
+                        </article>
+                    </li>
+
+                    <li class="grid__item">
+                        <article class="card card--product">
+                            <img class="card__img" src="images/coffee-8.jpg" alt="Coffee with cognac">
+                            <div class="card__body">
+                                <h3 class="card__title">Coffee with cognac</h3>
+                                <p class="card__text">Fragrant black coffee with cognac and whipped cream</p>
+                                <span class="price">$6.50</span>
+                            </div>
+                        </article>
+                    </li>
+                </ul>
+
+                <ul class="grid" data-grid="tea" hidden>
+                    <li class="grid__item">
+                        <article class="card card--product">
+                            <img class="card__img" src="images/tea-1.png" alt="Moroccan tea">
+                            <div class="card__body">
+                                <h3 class="card__title">Moroccan</h3>
+                                <p class="card__text">Fragrant black tea with the addition of tangerine, cinnamon,
+                                    honey, lemon and mint</p>
+                                <span class="price">$4.50</span>
+                            </div>
+                        </article>
+                    </li>
+
+                    <li class="grid__item">
+                        <article class="card card--product">
+                            <img class="card__img" src="images/tea-2.png" alt="Ginger tea">
+                            <div class="card__body">
+                                <h3 class="card__title">Ginger</h3>
+                                <p class="card__text">Original black tea with fresh ginger, lemon and honey</p>
+                                <span class="price">$5.00</span>
+                            </div>
+                        </article>
+                    </li>
+
+                    <li class="grid__item">
+                        <article class="card card--product">
+                            <img class="card__img" src="images/tea-3.png" alt="Cranberry tea">
+                            <div class="card__body">
+                                <h3 class="card__title">Cranberry</h3>
+                                <p class="card__text">Invigorating black tea with cranberry and honey</p>
+                                <span class="price">$5.00</span>
+                            </div>
+                        </article>
+                    </li>
+
+                    <li class="grid__item">
+                        <article class="card card--product">
+                            <img class="card__img" src="images/tea-4.png" alt="Sea buckthorn tea">
+                            <div class="card__body">
+                                <h3 class="card__title">Sea buckthorn</h3>
+                                <p class="card__text">Toning sweet black tea with sea buckthorn, fresh thyme and
+                                    cinnamon</p>
+                                <span class="price">$5.50</span>
+                            </div>
+                        </article>
+                    </li>
+                </ul>
+
+                <ul class="grid" data-grid="dessert" hidden>
+                    <li class="grid__item">
+                        <article class="card card--product">
+                            <img class="card__img" src="images/dessert-1.png" alt="Marble cheesecake">
+                            <div class="card__body">
+                                <h3 class="card__title">Marble cheesecake</h3>
+                                <p class="card__text">Philadelphia cheese with lemon zest on a light sponge cake and red
+                                    currant jam</p>
+                                <span class="price">$3.50</span>
+                            </div>
+                        </article>
+                    </li>
+
+                    <li class="grid__item">
+                        <article class="card card--product">
+                            <img class="card__img" src="images/dessert-2.png" alt="Red velvet">
+                            <div class="card__body">
+                                <h3 class="card__title">Red velvet</h3>
+                                <p class="card__text">Layer cake with cream cheese frosting</p>
+                                <span class="price">$4.00</span>
+                            </div>
+                        </article>
+                    </li>
+
+                    <li class="grid__item">
+                        <article class="card card--product">
+                            <img class="card__img" src="images/dessert-3.png" alt="Cheesecakes">
+                            <div class="card__body">
+                                <h3 class="card__title">Cheesecakes</h3>
+                                <p class="card__text">Soft cottage cheese pancakes with sour cream and fresh berries and
+                                    sprinkled with powdered sugar</p>
+                                <span class="price">$4.50</span>
+                            </div>
+                        </article>
+                    </li>
+
+                    <li class="grid__item">
+                        <article class="card card--product">
+                            <img class="card__img" src="images/dessert-4.png" alt="Creme brulee">
+                            <div class="card__body">
+                                <h3 class="card__title">Creme brulee</h3>
+                                <p class="card__text">Delicate creamy dessert in a caramel basket with wild berries</p>
+                                <span class="price">$4.00</span>
+                            </div>
+                        </article>
+                    </li>
+
+                    <li class="grid__item">
+                        <article class="card card--product">
+                            <img class="card__img" src="images/dessert-5.png" alt="Pancakes">
+                            <div class="card__body">
+                                <h3 class="card__title">Pancakes</h3>
+                                <p class="card__text">Tender pancakes with strawberry jam and fresh strawberries</p>
+                                <span class="price">$4.50</span>
+                            </div>
+                        </article>
+                    </li>
+
+                    <li class="grid__item">
+                        <article class="card card--product">
+                            <img class="card__img" src="images/dessert-6.png" alt="Honey cake">
+                            <div class="card__body">
+                                <h3 class="card__title">Honey cake</h3>
+                                <p class="card__text">Classic honey cake with delicate custard</p>
+                                <span class="price">$4.50</span>
+                            </div>
+                        </article>
+                    </li>
+
+                    <li class="grid__item">
+                        <article class="card card--product">
+                            <img class="card__img" src="images/dessert-7.png" alt="Chocolate cake">
+                            <div class="card__body">
+                                <h3 class="card__title">Chocolate cake</h3>
+                                <p class="card__text">Cake with hot chocolate filling and nuts with dried apricots</p>
+                                <span class="price">$5.50</span>
+                            </div>
+                        </article>
+                    </li>
+
+                    <li class="grid__item">
+                        <article class="card card--product">
+                            <img class="card__img" src="images/dessert-8.png" alt="Black forest">
+                            <div class="card__body">
+                                <h3 class="card__title">Black forest</h3>
+                                <p class="card__text">A combination of thin sponge cake with cherry jam and light
+                                    chocolate mousse</p>
+                                <span class="price">$6.50</span>
+                            </div>
+                        </article>
+                    </li>
+                </ul>
+
+                <div class="catalog__more" hidden>
+                    <button class="btn btn--dark" type="button" data-show-more>Show more</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="js/theme.js"></script>
+    <script src="js/main.js"></script>
 </body>
 
 </html>
