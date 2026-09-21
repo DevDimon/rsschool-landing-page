@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,9 +14,53 @@
         rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
-    <header class="header"></header>
+    <header class="header">
+        <div class="container header__inner">
+            <a class="logo" href="index.html" aria-label="Resource Coffee House — на главную">
+                <img class="logo__img logo__img--light" src="images/logo.png" alt="Resource Coffee House" width="150"
+                    height="62">
+                <img class="logo__img logo__img--dark" src="images/logo-dark.png" alt="" width="150" height="62"
+                    aria-hidden="true">
+            </a>
+
+            <nav class="nav" aria-label="Основная навигация">
+                <ul class="nav__list">
+                    <li><a class="nav__link" href="#favorite">Favorite coffee</a></li>
+                    <li><a class="nav__link" href="#about">About</a></li>
+                    <li><a class="nav__link" href="#mobile">Mobile app</a></li>
+                    <li><a class="nav__link" href="#contact">Contact us</a></li>
+                    <li><a class="nav__link" href="catalog.html">Menu</a></li>
+                </ul>
+            </nav>
+
+            <div class="header__actions">
+                <button class="theme-toggle" type="button" data-theme-toggle aria-label="Переключить тему"
+                    aria-pressed="false">
+                    <span class="theme-toggle__icon theme-toggle__icon--sun">
+                        <img src="images/Sun-icon.png" alt="" width="16" height="16">
+                    </span>
+                    <span class="theme-toggle__icon theme-toggle__icon--moon">
+                        <img src="images/Moon-icon.png" alt="" width="16" height="16">
+                    </span>
+                </button>
+
+                <a class="menu-btn" href="catalog.html">
+                    <span>Menu</span>
+                    <img class="menu-btn__icon" src="images/coffee-cup-icon.png" alt="" width="20" height="20">
+                </a>
+
+                <button class="burger" type="button" data-burger aria-label="Открыть меню" aria-expanded="false"
+                    aria-controls="mobile-menu">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
+        </div>
+
+    </header>
     <main id="main"></main>
     <footer class="footer" id="contact"></footer>
 </body>
+
 </html>
