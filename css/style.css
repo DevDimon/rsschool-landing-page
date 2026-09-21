@@ -314,6 +314,71 @@ em {
     background: color-mix(in srgb, var(--accent) 40%, transparent);
 }
 
+.menu-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 18px;
+    border-radius: 999px;
+    background: transparent;
+    color: var(--text);
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 1.5;
+    transition: background-color var(--t);
+}
+
+.menu-btn:hover {
+    background: color-mix(in srgb, var(--accent) 18%, transparent);
+}
+
+.menu-btn__icon {
+    width: 20px;
+    height: 20px;
+    object-fit: contain;
+    display: block;
+    pointer-events: none;
+}
+
+[data-theme="dark"] .menu-btn__icon {
+    filter: invert(1) brightness(1.4);
+}
+
+.burger {
+    display: none;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 5px;
+    padding: 0;
+    transition: background-color var(--t), border-color var(--t);
+}
+
+.burger span {
+    width: 20px;
+    height: 2px;
+    background: var(--text);
+    border-radius: 2px;
+    transition: transform var(--t), opacity var(--t), background-color var(--t);
+}
+
+.burger[aria-expanded="true"] span:nth-child(1) {
+    transform: translateY(7px) rotate(45deg);
+}
+
+.burger[aria-expanded="true"] span:nth-child(2) {
+    opacity: 0;
+}
+
+.burger[aria-expanded="true"] span:nth-child(3) {
+    transform: translateY(-7px) rotate(-45deg);
+}
+
 .mobile-menu {
     border-top: 1px solid var(--border);
     background: var(--surface);
@@ -347,4 +412,60 @@ em {
 .mobile-menu__list a:hover {
     background: color-mix(in srgb, var(--accent) 15%, transparent);
     color: var(--accent-hover);
+}
+
+.hero {
+    padding: 8px 0 40px;
+}
+
+.hero__card {
+    position: relative;
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    min-height: 560px;
+    display: flex;
+    align-items: center;
+    background: var(--container);
+    isolation: isolate;
+    width: 100%;
+}
+
+.hero__bg {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -2;
+}
+
+.hero__overlay {
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    background: var(--overlay);
+}
+
+.hero__content {
+    max-width: 600px;
+    padding: 80px 60px;
+    color: var(--text-inverse);
+}
+
+.hero__title {
+    font-size: clamp(42px, 2.9vw + 31px, 72px);
+    font-weight: 600;
+    line-height: 1.05;
+    letter-spacing: -.02em;
+    margin-bottom: 24px;
+    color: var(--text-inverse);
+}
+
+.hero__text {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.5;
+    color: color-mix(in srgb, var(--text-inverse) 85%, transparent);
+    margin-bottom: 32px;
+    max-width: 46ch;
 }
