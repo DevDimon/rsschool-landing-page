@@ -28,10 +28,9 @@
     <header class="header">
         <div class="container header__inner">
             <a class="logo" href="index.html" aria-label="Resource Coffee House — на главную">
-                <img class="logo__img logo__img--light" src="images/logo.png" alt="Logo light" width="150"
-                    height="62">
-                <img class="logo__img logo__img--dark" src="images/logo-dark.png" alt="Logo dark" width="150" height="62"
-                    aria-hidden="true">
+                <img class="logo__img logo__img--light" src="images/logo.png" alt="Logo light" width="150" height="62">
+                <img class="logo__img logo__img--dark" src="images/logo-dark.png" alt="Logo dark" width="150"
+                    height="62" aria-hidden="true">
             </a>
 
             <nav class="nav" aria-label="Основная навигация">
@@ -56,7 +55,8 @@
 
                 <a class="menu-btn" href="catalog.html">
                     <span>Menu</span>
-                    <img class="menu-btn__icon" src="images/coffee-cup-icon.png" alt="Coffee cup icon" width="20" height="20">
+                    <img class="menu-btn__icon" src="images/coffee-cup-icon.png" alt="Coffee cup icon" width="20"
+                        height="20">
                 </a>
 
                 <button class="burger" type="button" data-burger aria-label="Открыть меню" aria-expanded="false"
@@ -65,17 +65,17 @@
                 </button>
             </div>
         </div>
-
-        <div class="mobile-menu" id="mobile-menu" data-mobile-menu hidden>
-            <ul class="mobile-menu__list">
-                <li><a href="index.html#favorite">Favorite coffee</a></li>
-                <li><a href="index.html#about">About</a></li>
-                <li><a href="index.html#mobile">Mobile app</a></li>
-                <li><a href="index.html#contact">Contact us</a></li>
-                <li><a href="catalog.html">Menu</a></li>
-            </ul>
-        </div>
     </header>
+
+    <div class="mobile-menu" id="mobile-menu" data-mobile-menu hidden>
+        <ul class="mobile-menu__list">
+            <li><a href="index.html#favorite">Favorite coffee</a></li>
+            <li><a href="index.html#about">About</a></li>
+            <li><a href="index.html#mobile">Mobile app</a></li>
+            <li><a href="index.html#contact">Contact us</a></li>
+            <li><a href="catalog.html">Menu</a></li>
+        </ul>
+    </div>
 
     <main id="main">
 
@@ -411,6 +411,47 @@
         </div>
     </footer>
 
+    <div class="modal" data-modal hidden>
+        <div class="modal__overlay" data-modal-overlay></div>
+
+        <div class="modal__dialog" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+            <div class="modal__content">
+                <div class="modal__media">
+                    <img data-modal-img src="images/coffee-1.jpg" alt="coffee">
+                </div>
+
+                <div class="modal__info">
+                    <h2 class="modal__title" id="modal-title" data-modal-title>Coffee</h2>
+                    <p class="modal__desc" data-modal-desc></p>
+
+                    <div class="modal__param">
+                        <p class="modal__param-label">Size</p>
+                        <div class="modal__options" data-modal-sizes></div>
+                    </div>
+
+                    <div class="modal__param">
+                        <p class="modal__param-label">Additives</p>
+                        <div class="modal__options" data-modal-additives></div>
+                    </div>
+
+                    <div class="modal__total">
+                        <span>Total:</span>
+                        <span data-modal-total></span>
+                    </div>
+
+                    <p class="modal__note">
+                        <span class="modal__note-icon" aria-hidden="true">i</span>
+                        <span>The cost is not final. Download our mobile app to see the final price and place your
+                            order. Earn loyalty points and enjoy your favorite coffee with up to 20% discount.</span>
+                    </p>
+
+                    <button class="btn btn--outline modal__close" type="button" data-modal-close>Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/products.js"></script>
     <script src="js/theme.js"></script>
     <script src="js/main.js"></script>
 </body>
