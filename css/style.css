@@ -1580,6 +1580,11 @@ em {
         max-width: 320px;
     }
 
+    .modal__content {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+
     .footer__card {
         padding: 32px 22px;
         border-radius: 22px;
@@ -1625,11 +1630,6 @@ em {
         min-width: 24px;
         height: 24px;
         font-size: 12px;
-    }
-
-    .modal__content {
-        grid-template-columns: 1fr;
-        gap: 16px;
     }
 }
 
